@@ -3,7 +3,6 @@
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>GIVEN Upload Test</title>
-<script src="https://forminit.com/sdk/v1/forminit.js"></script>
 <style>
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;max-width:520px;margin:50px auto;padding:24px;background:#0B1830;color:#F3EFE4}
 h1{letter-spacing:.08em} label{display:block;margin:22px 0 8px}
@@ -14,20 +13,24 @@ button{margin-top:24px;background:#D1B15B;color:#0B1830;border:0;font-weight:700
 <body>
 <h1>GIVEN</h1><p>Temporary file-upload test</p>
 <form id="test-form" enctype="multipart/form-data">
-<label>Your name</label><input name="guest_name" required>
-<label>Receipt image or PDF</label><input type="file" name="receipt" accept="image/jpeg,image/png,application/pdf" required>
+<label>Your name</label><input name="fi-sender-fullName" required>
+<label>Receipt image or PDF</label><input type="file" name="fi-file-receipt" accept="image/jpeg,image/png,application/pdf" required>
 <button type="submit">SUBMIT TEST</button>
 </form><div id="status"></div>
+
+<script src="https://forminit.com/sdk/v1/forminit.js"></script>
 <script>
+const forminit = new Forminit();
 const FORM_ID="c6sudvhr52s";
 const form=document.getElementById("test-form"), statusEl=document.getElementById("status");
 form.addEventListener("submit",async(e)=>{
-e.preventDefault(); statusEl.textContent="Uploading…";
-const formData=new FormData(form);
-try{
-const {data,error}=await forminit.submit(FORM_ID,formData);
-if(error){statusEl.textContent="Upload failed: "+(error.message||"Unknown error");return;}
-statusEl.textContent="Submitted successfully. Now check Forminit Inbox and Files."; form.reset();
-}catch(err){statusEl.textContent="Upload failed: "+err.message;}
+  e.preventDefault();
+  statusEl.textContent="Uploading…";
+  try{
+    const {data,error}=await forminit.submit(FORM_ID,new FormData(form));
+    if(error){statusEl.textContent="Upload failed: "+(error.message||"Unknown error");return;}
+    statusEl.textContent="Submitted successfully. Now check Forminit Inbox and Files.";
+    form.reset();
+  }catch(err){statusEl.textContent="Upload failed: "+err.message;}
 });
 </script></body></html>
