@@ -89,7 +89,7 @@ button,.upload{display:block;width:100%;margin-top:34px;padding:15px;border:1px 
 const forminit=new Forminit(), FORM_ID="c6sudvhr52s", GIFT_CODES=["GIVEN-MG7K","GIVEN-HG5N","GIVEN-HG8R"];
 
 function isGift(){
- return document.getElementById('code').value.trim().GIFT_CODES.includes(document.getElementById('code').value.trim().toUpperCase());
+ return GIFT_CODES.includes(document.getElementById('code').value.trim().toUpperCase());
 }
 
 function show(n){
