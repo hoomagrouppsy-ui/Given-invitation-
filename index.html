@@ -112,6 +112,7 @@ function next(n){
    document.getElementById('guestName').textContent=nm.toUpperCase();
 
    if(isGift()){
+    document.getElementById('giftNote').innerHTML=c.toUpperCase()==='GIVEN-MG7K'?'THIS INVITATION IS A GIFT FROM MARAL<br>YOUR PARTICIPATION HAS BEEN TAKEN CARE OF.':'THIS INVITATION IS A GIFT FROM HOOMA<br>YOUR PARTICIPATION HAS BEEN TAKEN CARE OF.';
      document.getElementById('giftNote').style.display='block';
      document.getElementById('actionBtn').textContent='CONFIRM YOUR INVITATION →';
    }else{
