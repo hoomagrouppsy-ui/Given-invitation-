@@ -1,11 +1,13 @@
 <!doctype html>
-<html lang="fa">
+<html lang="fa" dir="rtl">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>GIVEN — Before You Arrive</title>
+
+<title>GIVEN — پیش از رسیدن</title>
 
 <style>
+
 :root{
   --navy:#0B1830;
   --ivory:#F3EFE4;
@@ -13,13 +15,15 @@
   --muted:#AAB0B8;
 }
 
-*{box-sizing:border-box}
+*{
+  box-sizing:border-box;
+}
 
 body{
   margin:0;
   background:var(--navy);
   color:var(--ivory);
-  font-family:Arial,Tahoma,sans-serif;
+  font-family:Tahoma,Arial,sans-serif;
   min-height:100vh;
 }
 
@@ -34,18 +38,24 @@ body{
   overflow:hidden;
 }
 
+/* GOLD CURVE */
+
 .curve{
   position:absolute;
   width:470px;
   height:470px;
   border:1px solid rgba(209,177,91,.42);
   border-radius:50%;
-  right:-345px;
+  left:-345px;
   top:75px;
   pointer-events:none;
 }
 
+/* BRAND */
+
 .brand{
+  direction:ltr;
+  text-align:left;
   font-size:11px;
   letter-spacing:.26em;
   color:var(--gold);
@@ -53,6 +63,8 @@ body{
 }
 
 .given{
+  direction:ltr;
+  text-align:left;
   color:var(--gold);
   font-size:43px;
   letter-spacing:.12em;
@@ -60,8 +72,9 @@ body{
   margin:0 0 19px;
 }
 
+/* INTRO */
+
 .intro{
-  direction:rtl;
   text-align:right;
   font-size:16px;
   line-height:2;
@@ -70,6 +83,8 @@ body{
 }
 
 .date{
+  direction:ltr;
+  text-align:right;
   margin-top:27px;
   font-size:12px;
   letter-spacing:.13em;
@@ -82,8 +97,9 @@ body{
   margin:30px 0;
 }
 
+/* ARRIVAL */
+
 .arrival{
-  direction:rtl;
   text-align:right;
   font-size:14px;
   line-height:2.1;
@@ -95,32 +111,28 @@ body{
   font-weight:500;
 }
 
+/* ADDRESS */
+
 .address{
   margin-top:27px;
   padding-top:22px;
   border-top:1px solid rgba(243,239,228,.12);
 }
 
-.address-en{
-  font-size:11px;
-  letter-spacing:.11em;
-  line-height:1.9;
-  color:var(--gold);
-}
-
 .address-fa{
-  direction:rtl;
   text-align:right;
   font-size:13px;
-  margin:5px 0;
+  line-height:2;
   color:#ddd9cf;
 }
 
+/* BEFORE ARRIVAL */
+
 .before{
   margin-top:42px;
-  font-size:11px;
-  letter-spacing:.24em;
+  font-size:13px;
   color:var(--gold);
+  text-align:right;
 }
 
 .group{
@@ -128,10 +140,10 @@ body{
 }
 
 .group-title{
-  font-size:10px;
-  letter-spacing:.20em;
+  font-size:12px;
   color:var(--muted);
   margin-bottom:15px;
+  text-align:right;
 }
 
 .options{
@@ -158,8 +170,7 @@ body{
   padding:13px 15px;
   border:1px solid rgba(243,239,228,.18);
   cursor:pointer;
-  font-size:11px;
-  letter-spacing:.12em;
+  font-size:13px;
   transition:.2s ease;
 }
 
@@ -188,14 +199,15 @@ body{
   top:3px;
 }
 
+/* NAME */
+
 .name-label{
-  direction:rtl;
-  text-align:right;
   display:block;
   margin-top:34px;
   margin-bottom:7px;
   color:var(--muted);
   font-size:12px;
+  text-align:right;
 }
 
 .name-input{
@@ -215,6 +227,8 @@ body{
   border-color:var(--gold);
 }
 
+/* BUTTON */
+
 .confirm{
   display:block;
   width:100%;
@@ -223,8 +237,8 @@ body{
   border:1px solid var(--gold);
   background:transparent;
   color:var(--ivory);
-  font-size:11px;
-  letter-spacing:.20em;
+  font-family:Tahoma,Arial,sans-serif;
+  font-size:13px;
   cursor:pointer;
 }
 
@@ -232,7 +246,52 @@ body{
   opacity:.55;
 }
 
+/* ERROR */
+
+.error{
+  min-height:20px;
+  margin-top:14px;
+  text-align:right;
+  font-size:12px;
+  color:var(--gold);
+  line-height:1.8;
+}
+
+/* SUCCESS */
+
+.success{
+  display:none;
+  padding-top:95px;
+  text-align:right;
+}
+
+.success .eyebrow{
+  color:var(--gold);
+  font-size:15px;
+  margin-bottom:20px;
+}
+
+.success h2{
+  margin:0;
+  font-size:28px;
+  line-height:1.8;
+  font-weight:500;
+}
+
+.success .final-given{
+  direction:ltr;
+  text-align:left;
+  margin-top:85px;
+  color:var(--gold);
+  font-size:20px;
+  letter-spacing:.18em;
+}
+
+/* FOOTER */
+
 .footer{
+  direction:ltr;
+  text-align:left;
   margin-top:auto;
   padding-top:46px;
   font-size:10px;
@@ -240,51 +299,9 @@ body{
   color:rgba(243,239,228,.45);
 }
 
-.success{
-  display:none;
-  padding-top:95px;
-}
-
-.success .eyebrow{
-  color:var(--gold);
-  font-size:11px;
-  letter-spacing:.24em;
-  margin-bottom:18px;
-}
-
-.success h2{
-  margin:0;
-  font-size:28px;
-  line-height:1.45;
-  letter-spacing:.06em;
-  font-weight:500;
-}
-
-.success .tomorrow{
-  margin-top:30px;
-  font-size:15px;
-  letter-spacing:.07em;
-  color:#ddd9cf;
-}
-
-.success .final-given{
-  margin-top:85px;
-  color:var(--gold);
-  font-size:20px;
-  letter-spacing:.18em;
-}
-
-.error{
-  min-height:20px;
-  margin-top:14px;
-  direction:rtl;
-  text-align:right;
-  font-size:12px;
-  color:var(--gold);
-  line-height:1.8;
-}
 </style>
 </head>
+
 
 <body>
 
@@ -292,11 +309,16 @@ body{
 
 <div class="curve"></div>
 
+
 <div id="mainContent">
 
-  <div class="brand">HOOMA · GIVEN</div>
+  <div class="brand">
+    HOOMA · GIVEN
+  </div>
 
-  <h1 class="given">GIVEN</h1>
+  <h1 class="given">
+    GIVEN
+  </h1>
 
   <p class="intro">
     فردا، این تجربه با حضور شما آغاز می‌شود.
@@ -308,90 +330,204 @@ body{
 
   <div class="rule"></div>
 
+
   <div class="arrival">
-    <strong>GIVEN رأس ساعت ۱۵:۰۰ آغاز می‌شود.</strong><br>
+
+    <strong>
+      GIVEN رأس ساعت ۱۵:۰۰ آغاز می‌شود.
+    </strong>
+
+    <br>
+
     از ساعت ۱۴:۳۰ تا ۱۴:۴۵ منتظر شما خواهیم بود.
+
   </div>
+
 
   <div class="address">
-    <div class="address-en">UNIT 9 · NO. 248</div>
-    <div class="address-fa">روبه‌روی مجتمع تجاری روشا</div>
-    <div class="address-en">FARMANIEH · TEHRAN</div>
+
+    <div class="address-fa">
+      پاسداران، نرسیده به چهارراه فرمانیه
+    </div>
+
+    <div class="address-fa">
+      تنگستان دوم، پلاک ۱، واحد ۴
+    </div>
+
   </div>
 
-  <div class="before">BEFORE YOU ARRIVE</div>
+
+  <div class="before">
+    پیش از رسیدن
+  </div>
+
 
   <form id="arrivalForm">
 
+
+    <!-- COFFEE -->
+
     <div class="group">
-      <div class="group-title">COFFEE</div>
+
+      <div class="group-title">
+        قهوه
+      </div>
 
       <div class="options">
 
+
         <div class="option">
-          <input type="radio" id="americano" name="coffee" value="Americano">
+
+          <input
+            type="radio"
+            id="americano"
+            name="coffee"
+            value="Americano"
+          >
+
           <label for="americano">
+
             <span class="circle"></span>
-            AMERICANO
+
+            آمریکانو
+
           </label>
+
         </div>
 
+
         <div class="option">
-          <input type="radio" id="latte" name="coffee" value="Latte">
+
+          <input
+            type="radio"
+            id="latte"
+            name="coffee"
+            value="Latte"
+          >
+
           <label for="latte">
+
             <span class="circle"></span>
-            LATTE
+
+            لاته
+
           </label>
+
         </div>
 
+
         <div class="option">
-          <input type="radio" id="caramel" name="coffee" value="Caramel Macchiato">
+
+          <input
+            type="radio"
+            id="caramel"
+            name="coffee"
+            value="Caramel Macchiato"
+          >
+
           <label for="caramel">
+
             <span class="circle"></span>
-            CARAMEL MACCHIATO
+
+            کارامل ماکیاتو
+
           </label>
+
         </div>
+
 
       </div>
+
     </div>
 
 
+
+    <!-- FRESH -->
+
     <div class="group">
-      <div class="group-title">FRESH</div>
+
+      <div class="group-title">
+        نوشیدنی تازه
+      </div>
 
       <div class="options">
 
+
         <div class="option">
-          <input type="radio" id="orange" name="fresh" value="Orange">
+
+          <input
+            type="radio"
+            id="orange"
+            name="fresh"
+            value="Orange"
+          >
+
           <label for="orange">
+
             <span class="circle"></span>
-            ORANGE
+
+            پرتقال
+
           </label>
+
         </div>
 
+
         <div class="option">
-          <input type="radio" id="melon" name="fresh" value="Melon">
+
+          <input
+            type="radio"
+            id="melon"
+            name="fresh"
+            value="Melon"
+          >
+
           <label for="melon">
+
             <span class="circle"></span>
-            MELON
+
+            طالبی
+
           </label>
+
         </div>
 
+
         <div class="option">
-          <input type="radio" id="sourcherry" name="fresh" value="Sour Cherry">
+
+          <input
+            type="radio"
+            id="sourcherry"
+            name="fresh"
+            value="Sour Cherry"
+          >
+
           <label for="sourcherry">
+
             <span class="circle"></span>
-            SOUR CHERRY
+
+            آلبالو
+
           </label>
+
         </div>
+
 
       </div>
+
     </div>
 
 
-    <label class="name-label" for="guestName">
+
+    <!-- NAME -->
+
+    <label
+      class="name-label"
+      for="guestName"
+    >
       نام شما
     </label>
+
 
     <input
       class="name-input"
@@ -400,61 +536,111 @@ body{
       autocomplete="name"
     >
 
-    <button class="confirm" id="confirmBtn" type="submit">
-      CONFIRM
+
+
+    <!-- CONFIRM -->
+
+    <button
+      class="confirm"
+      id="confirmBtn"
+      type="submit"
+    >
+      ثبت انتخاب
     </button>
 
-    <div class="error" id="error"></div>
+
+    <div
+      class="error"
+      id="error"
+    ></div>
+
 
   </form>
 
 </div>
 
 
-<section class="success" id="success">
 
-  <div class="eyebrow">THANK YOU.</div>
+<!-- SUCCESS PAGE -->
+
+<section
+  class="success"
+  id="success"
+>
+
+  <div class="eyebrow">
+    انتخابت ثبت شد.
+  </div>
 
   <h2>
-    WE'LL SEE YOU<br>
-    TOMORROW.
+    منتظرت هستیم.
   </h2>
 
-  <div class="final-given">GIVEN</div>
+  <div class="final-given">
+    GIVEN
+  </div>
 
 </section>
 
 
-<div class="footer">HOOMA · GIVEN</div>
+
+<div class="footer">
+  HOOMA · GIVEN
+</div>
+
 
 </main>
 
 
+
 <script src="https://forminit.com/sdk/v1/forminit.js"></script>
+
 
 <script>
 
 const forminit = new Forminit();
+
 const FORM_ID = "c6sudvhr52s";
 
-const form = document.getElementById("arrivalForm");
-const btn = document.getElementById("confirmBtn");
-const errorBox = document.getElementById("error");
 
-form.addEventListener("submit", async function(e){
+const form =
+  document.getElementById("arrivalForm");
+
+const btn =
+  document.getElementById("confirmBtn");
+
+const errorBox =
+  document.getElementById("error");
+
+
+
+form.addEventListener(
+  "submit",
+  async function(e){
 
   e.preventDefault();
 
   errorBox.textContent = "";
 
+
   const name =
-    document.getElementById("guestName").value.trim();
+    document
+      .getElementById("guestName")
+      .value
+      .trim();
+
 
   const coffee =
-    document.querySelector('input[name="coffee"]:checked');
+    document.querySelector(
+      'input[name="coffee"]:checked'
+    );
+
 
   const fresh =
-    document.querySelector('input[name="fresh"]:checked');
+    document.querySelector(
+      'input[name="fresh"]:checked'
+    );
+
 
 
   if(!name || !coffee || !fresh){
@@ -463,31 +649,42 @@ form.addEventListener("submit", async function(e){
       "لطفاً نام، قهوه و نوشیدنی خود را انتخاب کنید.";
 
     return;
+
   }
 
 
+
   btn.disabled = true;
-  btn.textContent = "CONFIRMING…";
+
+  btn.textContent =
+    "در حال ثبت…";
+
 
 
   try{
 
-    const data = new FormData();
+
+    const data =
+      new FormData();
+
 
     data.append(
       "fi-sender-fullName",
       name
     );
 
+
     data.append(
       "fi-text-coffee",
       coffee.value
     );
 
+
     data.append(
       "fi-text-fresh",
       fresh.value
     );
+
 
     data.append(
       "fi-text-entryType",
@@ -495,41 +692,62 @@ form.addEventListener("submit", async function(e){
     );
 
 
+
     const {error} =
-      await forminit.submit(FORM_ID,data);
+      await forminit.submit(
+        FORM_ID,
+        data
+      );
+
 
 
     if(error){
 
       throw new Error(
-        error.message || "Submission failed"
+        error.message ||
+        "Submission failed"
       );
 
     }
 
 
-    document.getElementById("mainContent")
-      .style.display = "none";
 
-    document.getElementById("success")
-      .style.display = "block";
+    document
+      .getElementById("mainContent")
+      .style.display =
+      "none";
+
+
+    document
+      .getElementById("success")
+      .style.display =
+      "block";
+
 
     window.scrollTo(0,0);
 
 
+
   }catch(err){
+
 
     errorBox.textContent =
       "ثبت انتخاب انجام نشد. لطفاً دوباره تلاش کنید.";
 
-    btn.disabled = false;
-    btn.textContent = "CONFIRM";
+
+    btn.disabled =
+      false;
+
+
+    btn.textContent =
+      "ثبت انتخاب";
 
   }
 
 });
 
 </script>
+
 
 </body>
 </html>
