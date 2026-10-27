@@ -38,8 +38,6 @@ body{
   overflow:hidden;
 }
 
-/* GOLD CURVE */
-
 .curve{
   position:absolute;
   width:470px;
@@ -50,8 +48,6 @@ body{
   top:75px;
   pointer-events:none;
 }
-
-/* BRAND */
 
 .brand{
   direction:ltr;
@@ -71,8 +67,6 @@ body{
   font-weight:500;
   margin:0 0 19px;
 }
-
-/* INTRO */
 
 .intro{
   text-align:right;
@@ -97,8 +91,6 @@ body{
   margin:30px 0;
 }
 
-/* ARRIVAL */
-
 .arrival{
   text-align:right;
   font-size:14px;
@@ -110,8 +102,6 @@ body{
   color:var(--ivory);
   font-weight:500;
 }
-
-/* ADDRESS */
 
 .address{
   margin-top:27px;
@@ -125,8 +115,6 @@ body{
   line-height:2;
   color:#ddd9cf;
 }
-
-/* BEFORE ARRIVAL */
 
 .before{
   margin-top:42px;
@@ -199,8 +187,6 @@ body{
   top:3px;
 }
 
-/* NAME */
-
 .name-label{
   display:block;
   margin-top:34px;
@@ -227,8 +213,6 @@ body{
   border-color:var(--gold);
 }
 
-/* BUTTON */
-
 .confirm{
   display:block;
   width:100%;
@@ -246,8 +230,6 @@ body{
   opacity:.55;
 }
 
-/* ERROR */
-
 .error{
   min-height:20px;
   margin-top:14px;
@@ -256,8 +238,6 @@ body{
   color:var(--gold);
   line-height:1.8;
 }
-
-/* SUCCESS */
 
 .success{
   display:none;
@@ -278,6 +258,16 @@ body{
   font-weight:500;
 }
 
+.dress-note{
+  margin-top:38px;
+  padding-top:24px;
+  border-top:1px solid rgba(209,177,91,.28);
+  font-size:13px;
+  line-height:2.2;
+  color:#ddd9cf;
+  max-width:430px;
+}
+
 .success .final-given{
   direction:ltr;
   text-align:left;
@@ -286,8 +276,6 @@ body{
   font-size:20px;
   letter-spacing:.18em;
 }
-
-/* FOOTER */
 
 .footer{
   direction:ltr;
@@ -302,13 +290,11 @@ body{
 </style>
 </head>
 
-
 <body>
 
 <main class="wrap">
 
 <div class="curve"></div>
-
 
 <div id="mainContent">
 
@@ -330,7 +316,6 @@ body{
 
   <div class="rule"></div>
 
-
   <div class="arrival">
 
     <strong>
@@ -342,7 +327,6 @@ body{
     از ساعت ۱۴:۳۰ تا ۱۴:۴۵ منتظر شما خواهیم بود.
 
   </div>
-
 
   <div class="address">
 
@@ -356,16 +340,11 @@ body{
 
   </div>
 
-
   <div class="before">
     پیش از رسیدن
   </div>
 
-
   <form id="arrivalForm">
-
-
-    <!-- COFFEE -->
 
     <div class="group">
 
@@ -374,7 +353,6 @@ body{
       </div>
 
       <div class="options">
-
 
         <div class="option">
 
@@ -386,15 +364,11 @@ body{
           >
 
           <label for="americano">
-
             <span class="circle"></span>
-
             آمریکانو
-
           </label>
 
         </div>
-
 
         <div class="option">
 
@@ -406,15 +380,11 @@ body{
           >
 
           <label for="latte">
-
             <span class="circle"></span>
-
             لاته
-
           </label>
 
         </div>
-
 
         <div class="option">
 
@@ -426,23 +396,15 @@ body{
           >
 
           <label for="caramel">
-
             <span class="circle"></span>
-
             کارامل ماکیاتو
-
           </label>
 
         </div>
 
-
       </div>
 
     </div>
-
-
-
-    <!-- FRESH -->
 
     <div class="group">
 
@@ -451,7 +413,6 @@ body{
       </div>
 
       <div class="options">
-
 
         <div class="option">
 
@@ -463,15 +424,11 @@ body{
           >
 
           <label for="orange">
-
             <span class="circle"></span>
-
             پرتقال
-
           </label>
 
         </div>
-
 
         <div class="option">
 
@@ -483,15 +440,11 @@ body{
           >
 
           <label for="melon">
-
             <span class="circle"></span>
-
             طالبی
-
           </label>
 
         </div>
-
 
         <div class="option">
 
@@ -503,23 +456,15 @@ body{
           >
 
           <label for="sourcherry">
-
             <span class="circle"></span>
-
             آلبالو
-
           </label>
 
         </div>
 
-
       </div>
 
     </div>
-
-
-
-    <!-- NAME -->
 
     <label
       class="name-label"
@@ -528,17 +473,12 @@ body{
       نام شما
     </label>
 
-
     <input
       class="name-input"
       id="guestName"
       type="text"
       autocomplete="name"
     >
-
-
-
-    <!-- CONFIRM -->
 
     <button
       class="confirm"
@@ -548,17 +488,14 @@ body{
       ثبت انتخاب
     </button>
 
-
     <div
       class="error"
       id="error"
     ></div>
 
-
   </form>
 
 </div>
-
 
 
 <!-- SUCCESS PAGE -->
@@ -576,6 +513,11 @@ body{
     منتظرت هستیم.
   </h2>
 
+  <div class="dress-note">
+    از آن‌جا که این بار، به‌طور اتفاقی، همه‌ی مهمانان GIVEN خانم هستند،
+    برای پوشش هم هر آنچه با آن راحت‌ترید انتخاب کنید.
+  </div>
+
   <div class="final-given">
     GIVEN
   </div>
@@ -583,25 +525,20 @@ body{
 </section>
 
 
-
 <div class="footer">
   HOOMA · GIVEN
 </div>
 
-
 </main>
 
 
-
 <script src="https://forminit.com/sdk/v1/forminit.js"></script>
-
 
 <script>
 
 const forminit = new Forminit();
 
 const FORM_ID = "c6sudvhr52s";
-
 
 const form =
   document.getElementById("arrivalForm");
@@ -613,7 +550,6 @@ const errorBox =
   document.getElementById("error");
 
 
-
 form.addEventListener(
   "submit",
   async function(e){
@@ -622,25 +558,21 @@ form.addEventListener(
 
   errorBox.textContent = "";
 
-
   const name =
     document
       .getElementById("guestName")
       .value
       .trim();
 
-
   const coffee =
     document.querySelector(
       'input[name="coffee"]:checked'
     );
 
-
   const fresh =
     document.querySelector(
       'input[name="fresh"]:checked'
     );
-
 
 
   if(!name || !coffee || !fresh){
@@ -653,38 +585,31 @@ form.addEventListener(
   }
 
 
-
   btn.disabled = true;
 
   btn.textContent =
     "در حال ثبت…";
 
 
-
   try{
-
 
     const data =
       new FormData();
-
 
     data.append(
       "fi-sender-fullName",
       name
     );
 
-
     data.append(
       "fi-text-coffee",
       coffee.value
     );
 
-
     data.append(
       "fi-text-fresh",
       fresh.value
     );
-
 
     data.append(
       "fi-text-entryType",
@@ -692,13 +617,11 @@ form.addEventListener(
     );
 
 
-
     const {error} =
       await forminit.submit(
         FORM_ID,
         data
       );
-
 
 
     if(error){
@@ -711,33 +634,26 @@ form.addEventListener(
     }
 
 
-
     document
       .getElementById("mainContent")
       .style.display =
       "none";
-
 
     document
       .getElementById("success")
       .style.display =
       "block";
 
-
     window.scrollTo(0,0);
-
 
 
   }catch(err){
 
-
     errorBox.textContent =
       "ثبت انتخاب انجام نشد. لطفاً دوباره تلاش کنید.";
 
-
     btn.disabled =
       false;
-
 
     btn.textContent =
       "ثبت انتخاب";
@@ -747,7 +663,6 @@ form.addEventListener(
 });
 
 </script>
-
 
 </body>
 </html>
